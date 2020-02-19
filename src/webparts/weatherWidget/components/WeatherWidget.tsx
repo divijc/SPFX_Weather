@@ -8,16 +8,17 @@ export default class WeatherWidget extends React.Component<IWeatherWidgetProps, 
     return (
       <div className={ styles.weatherWidget }>
         <div className={ styles.container }>
-          <div className={ styles.row }>
-            <div className={ styles.column }>
-              <span className={ styles.title }>Welcome to SharePoint!</span>
-              <p className={ styles.subTitle }>Customize SharePoint experiences using Web Parts.</p>
-              <p className={ styles.description }>{escape(this.props.description)}</p>
-              <a href="https://aka.ms/spfx" className={ styles.button }>
-                <span className={ styles.label }>Learn more</span>
-              </a>
+        <article className={styles.widget}>
+          <div className={styles.weatherIcon}><i className="wi wi-day-cloudy"></i></div>
+          <div className={styles.weatherInfo}>
+            <div className={styles.temperature}><span>25&deg;</span></div>
+            <div className={styles.description}>    
+              <div className={styles.weatherCondition}>CLOUDY</div>    
+              <div className={styles.place}>New York, New York</div>
             </div>
           </div>
+          <div className={styles.date}>1st Jan</div>
+        </article>
         </div>
       </div>
     );

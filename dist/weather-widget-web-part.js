@@ -1,4 +1,4 @@
-define("61a51144-f236-4d62-983c-2c6be2ccf31a_0.0.1", ["@microsoft/sp-core-library","@microsoft/sp-lodash-subset","@microsoft/sp-webpart-base","WeatherWidgetWebPartStrings","react","react-dom"], function(__WEBPACK_EXTERNAL_MODULE__microsoft_sp_core_library__, __WEBPACK_EXTERNAL_MODULE__microsoft_sp_lodash_subset__, __WEBPACK_EXTERNAL_MODULE__microsoft_sp_webpart_base__, __WEBPACK_EXTERNAL_MODULE_WeatherWidgetWebPartStrings__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom__) { return /******/ (function(modules) { // webpackBootstrap
+define("61a51144-f236-4d62-983c-2c6be2ccf31a_0.0.1", ["@microsoft/sp-core-library","@microsoft/sp-webpart-base","WeatherWidgetWebPartStrings","react","react-dom"], function(__WEBPACK_EXTERNAL_MODULE__microsoft_sp_core_library__, __WEBPACK_EXTERNAL_MODULE__microsoft_sp_webpart_base__, __WEBPACK_EXTERNAL_MODULE_WeatherWidgetWebPartStrings__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom__) { return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -183,8 +183,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _WeatherWidget_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./WeatherWidget.module.scss */ "./lib/webparts/weatherWidget/components/WeatherWidget.module.scss.js");
-/* harmony import */ var _microsoft_sp_lodash_subset__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @microsoft/sp-lodash-subset */ "@microsoft/sp-lodash-subset");
-/* harmony import */ var _microsoft_sp_lodash_subset__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_microsoft_sp_lodash_subset__WEBPACK_IMPORTED_MODULE_2__);
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -197,7 +195,6 @@ var __extends = (undefined && undefined.__extends) || (function () {
 })();
 
 
-
 var WeatherWidget = /** @class */ (function (_super) {
     __extends(WeatherWidget, _super);
     function WeatherWidget() {
@@ -206,13 +203,16 @@ var WeatherWidget = /** @class */ (function (_super) {
     WeatherWidget.prototype.render = function () {
         return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: _WeatherWidget_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].weatherWidget },
             react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: _WeatherWidget_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].container },
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: _WeatherWidget_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].row },
-                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: _WeatherWidget_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].column },
-                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", { className: _WeatherWidget_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].title }, "Welcome to SharePoint!"),
-                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", { className: _WeatherWidget_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].subTitle }, "Customize SharePoint experiences using Web Parts."),
-                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", { className: _WeatherWidget_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].description }, Object(_microsoft_sp_lodash_subset__WEBPACK_IMPORTED_MODULE_2__["escape"])(this.props.description)),
-                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", { href: "https://aka.ms/spfx", className: _WeatherWidget_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].button },
-                            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", { className: _WeatherWidget_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].label }, "Learn more")))))));
+                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("article", { className: _WeatherWidget_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].widget },
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: _WeatherWidget_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].weatherIcon },
+                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("i", { className: "wi wi-day-cloudy" })),
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: _WeatherWidget_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].weatherInfo },
+                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: _WeatherWidget_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].temperature },
+                            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", null, "25\u00B0")),
+                        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: _WeatherWidget_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].description },
+                            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: _WeatherWidget_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].weatherCondition }, "CLOUDY"),
+                            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: _WeatherWidget_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].place }, "New York, New York"))),
+                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: _WeatherWidget_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].date }, "1st Jan")))));
     };
     return WeatherWidget;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]));
@@ -252,16 +252,23 @@ __webpack_require__.r(__webpack_exports__);
 /* tslint:disable */
 __webpack_require__(/*! ./WeatherWidget.module.css */ "./lib/webparts/weatherWidget/components/WeatherWidget.module.css");
 var styles = {
-    weatherWidget: 'weatherWidget_21e01da4',
-    container: 'container_21e01da4',
-    row: 'row_21e01da4',
-    column: 'column_21e01da4',
-    'ms-Grid': 'ms-Grid_21e01da4',
-    title: 'title_21e01da4',
-    subTitle: 'subTitle_21e01da4',
-    description: 'description_21e01da4',
-    button: 'button_21e01da4',
-    label: 'label_21e01da4'
+    widget: 'widget_dd2145bf',
+    weatherIcon: 'weatherIcon_dd2145bf',
+    weatherInfo: 'weatherInfo_dd2145bf',
+    temperature: 'temperature_dd2145bf',
+    description: 'description_dd2145bf',
+    weatherCondition: 'weatherCondition_dd2145bf',
+    place: 'place_dd2145bf',
+    date: 'date_dd2145bf',
+    weatherWidget: 'weatherWidget_dd2145bf',
+    container: 'container_dd2145bf',
+    row: 'row_dd2145bf',
+    column: 'column_dd2145bf',
+    'ms-Grid': 'ms-Grid_dd2145bf',
+    title: 'title_dd2145bf',
+    subTitle: 'subTitle_dd2145bf',
+    button: 'button_dd2145bf',
+    label: 'label_dd2145bf'
 };
 /* harmony default export */ __webpack_exports__["default"] = (styles);
 /* tslint:enable */ 
@@ -649,10 +656,11 @@ function shouldUseCssText() {
 
 exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
-
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Poiret+One);", ""]);
+exports.push([module.i, "@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css);", ""]);
 
 // module
-exports.push([module.i, ".weatherWidget_21e01da4 .container_21e01da4{max-width:700px;margin:0 auto;-webkit-box-shadow:0 2px 4px 0 rgba(0,0,0,.2),0 25px 50px 0 rgba(0,0,0,.1);box-shadow:0 2px 4px 0 rgba(0,0,0,.2),0 25px 50px 0 rgba(0,0,0,.1)}.weatherWidget_21e01da4 .row_21e01da4{margin:0 -8px;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;background-color:#005a9e;padding:20px}.weatherWidget_21e01da4 .row_21e01da4:after,.weatherWidget_21e01da4 .row_21e01da4:before{display:table;content:\"\";line-height:0}.weatherWidget_21e01da4 .row_21e01da4:after{clear:both}.weatherWidget_21e01da4 .column_21e01da4{position:relative;min-height:1px;padding-left:8px;padding-right:8px;-webkit-box-sizing:border-box;box-sizing:border-box}[dir=ltr] .weatherWidget_21e01da4 .column_21e01da4{float:left}[dir=rtl] .weatherWidget_21e01da4 .column_21e01da4{float:right}.weatherWidget_21e01da4 .column_21e01da4 .ms-Grid_21e01da4{padding:0}@media (min-width:640px){.weatherWidget_21e01da4 .column_21e01da4{width:83.33333333333334%}}@media (min-width:1024px){.weatherWidget_21e01da4 .column_21e01da4{width:66.66666666666666%}}@media (min-width:1024px){[dir=ltr] .weatherWidget_21e01da4 .column_21e01da4{left:16.66667%}[dir=rtl] .weatherWidget_21e01da4 .column_21e01da4{right:16.66667%}}@media (min-width:640px){[dir=ltr] .weatherWidget_21e01da4 .column_21e01da4{left:8.33333%}[dir=rtl] .weatherWidget_21e01da4 .column_21e01da4{right:8.33333%}}.weatherWidget_21e01da4 .title_21e01da4{font-size:21px;font-weight:100;color:#fff}.weatherWidget_21e01da4 .description_21e01da4,.weatherWidget_21e01da4 .subTitle_21e01da4{font-size:17px;font-weight:300;color:#fff}.weatherWidget_21e01da4 .button_21e01da4{text-decoration:none;height:32px;min-width:80px;background-color:#0078d4;border-color:#0078d4;color:#fff;outline:transparent;position:relative;font-family:Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;-webkit-font-smoothing:antialiased;font-size:14px;font-weight:400;border-width:0;text-align:center;cursor:pointer;display:inline-block;padding:0 16px}.weatherWidget_21e01da4 .button_21e01da4 .label_21e01da4{font-weight:600;font-size:14px;height:32px;line-height:32px;margin:0 4px;vertical-align:top;display:inline-block}", ""]);
+exports.push([module.i, ".widget_dd2145bf{font-family:Poiret One;display:-webkit-box;display:-ms-flexbox;display:flex;height:300px;-ms-flex-wrap:wrap;flex-wrap:wrap;cursor:pointer;border-radius:0;-webkit-box-shadow:0 27px 55px 0 rgba(0,0,0,.3),0 17px 17px 0 rgba(0,0,0,.15);box-shadow:0 27px 55px 0 rgba(0,0,0,.3),0 17px 17px 0 rgba(0,0,0,.15)}.widget_dd2145bf .weatherIcon_dd2145bf{-webkit-box-flex:1;-ms-flex:1 100%;flex:1 100%;height:60%;border-top-left-radius:0;border-top-right-radius:0;background:#fafafa;font-family:weathericons;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-pack:distribute;justify-content:space-around;font-size:100px}.widget_dd2145bf .weatherIcon_dd2145bf i{padding-top:30px}.widget_dd2145bf .weatherInfo_dd2145bf{-webkit-box-flex:0;-ms-flex:0 0 70%;flex:0 0 70%;height:40%;background:#080705;border-bottom-left-radius:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:#fff}.widget_dd2145bf .weatherInfo_dd2145bf .temperature_dd2145bf{-webkit-box-flex:0;-ms-flex:0 0 40%;flex:0 0 40%;width:100%;font-size:65px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around}.widget_dd2145bf .weatherInfo_dd2145bf .description_dd2145bf{-webkit-box-flex:0;-ms-flex:0 60%;flex:0 60%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;width:100%;height:100%;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.widget_dd2145bf .weatherInfo_dd2145bf .description_dd2145bf .weatherCondition_dd2145bf{text-transform:uppercase;font-size:35px;font-weight:100}.widget_dd2145bf .weatherInfo_dd2145bf .description_dd2145bf .place_dd2145bf{font-size:15px}.widget_dd2145bf .date_dd2145bf{-webkit-box-flex:0;-ms-flex:0 0 30%;flex:0 0 30%;height:40%;background:#70c1b3;border-bottom-right-radius:0;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:#fff;font-size:30px;font-weight:800}p{position:fixed;bottom:0;right:2%}p a{text-decoration:none;color:#e4d6a7;font-size:10px}.weatherWidget_dd2145bf .container_dd2145bf{max-width:700px;margin:0 auto;-webkit-box-shadow:0 2px 4px 0 rgba(0,0,0,.2),0 25px 50px 0 rgba(0,0,0,.1);box-shadow:0 2px 4px 0 rgba(0,0,0,.2),0 25px 50px 0 rgba(0,0,0,.1)}.weatherWidget_dd2145bf .row_dd2145bf{margin:0 -8px;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;background-color:#005a9e;padding:20px}.weatherWidget_dd2145bf .row_dd2145bf:after,.weatherWidget_dd2145bf .row_dd2145bf:before{display:table;content:\"\";line-height:0}.weatherWidget_dd2145bf .row_dd2145bf:after{clear:both}.weatherWidget_dd2145bf .column_dd2145bf{position:relative;min-height:1px;padding-left:8px;padding-right:8px;-webkit-box-sizing:border-box;box-sizing:border-box}[dir=ltr] .weatherWidget_dd2145bf .column_dd2145bf{float:left}[dir=rtl] .weatherWidget_dd2145bf .column_dd2145bf{float:right}.weatherWidget_dd2145bf .column_dd2145bf .ms-Grid_dd2145bf{padding:0}@media (min-width:640px){.weatherWidget_dd2145bf .column_dd2145bf{width:83.33333333333334%}}@media (min-width:1024px){.weatherWidget_dd2145bf .column_dd2145bf{width:66.66666666666666%}}@media (min-width:1024px){[dir=ltr] .weatherWidget_dd2145bf .column_dd2145bf{left:16.66667%}[dir=rtl] .weatherWidget_dd2145bf .column_dd2145bf{right:16.66667%}}@media (min-width:640px){[dir=ltr] .weatherWidget_dd2145bf .column_dd2145bf{left:8.33333%}[dir=rtl] .weatherWidget_dd2145bf .column_dd2145bf{right:8.33333%}}.weatherWidget_dd2145bf .title_dd2145bf{font-size:21px;font-weight:100;color:#fff}.weatherWidget_dd2145bf .description_dd2145bf,.weatherWidget_dd2145bf .subTitle_dd2145bf{font-size:17px;font-weight:300;color:#fff}.weatherWidget_dd2145bf .button_dd2145bf{text-decoration:none;height:32px;min-width:80px;background-color:#0078d4;border-color:#0078d4;color:#fff;outline:transparent;position:relative;font-family:Segoe UI WestEuropean,Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;-webkit-font-smoothing:antialiased;font-size:14px;font-weight:400;border-width:0;text-align:center;cursor:pointer;display:inline-block;padding:0 16px}.weatherWidget_dd2145bf .button_dd2145bf .label_dd2145bf{font-weight:600;font-size:14px;height:32px;line-height:32px;margin:0 4px;vertical-align:top;display:inline-block}", ""]);
 
 // exports
 
@@ -785,17 +793,6 @@ module.exports = g;
 /***/ (function(module, exports) {
 
 module.exports = __WEBPACK_EXTERNAL_MODULE__microsoft_sp_core_library__;
-
-/***/ }),
-
-/***/ "@microsoft/sp-lodash-subset":
-/*!**********************************************!*\
-  !*** external "@microsoft/sp-lodash-subset" ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE__microsoft_sp_lodash_subset__;
 
 /***/ }),
 

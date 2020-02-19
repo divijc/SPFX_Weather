@@ -1,4 +1,12 @@
 declare const styles: {
+    widget: string;
+    weatherIcon: string;
+    weatherInfo: string;
+    temperature: string;
+    description: string;
+    weatherCondition: string;
+    place: string;
+    date: string;
     weatherWidget: string;
     container: string;
     row: string;
@@ -6,7 +14,6 @@ declare const styles: {
     'ms-Grid': string;
     title: string;
     subTitle: string;
-    description: string;
     button: string;
     label: string;
 };
