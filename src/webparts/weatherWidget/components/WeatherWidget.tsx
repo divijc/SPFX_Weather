@@ -4,8 +4,13 @@ import { IWeatherWidgetProps } from './IWeatherWidgetProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 
 export default class WeatherWidget extends React.Component<IWeatherWidgetProps, {}> {
+  private getLatLong(){
+    return  "28.643999,77.091003"
+  }
   public render(): React.ReactElement<IWeatherWidgetProps> {
-    
+    let latlong = this.getLatLong();
+    let lat = latlong.split(",")[0];
+    let long = latlong.split(",")[1];
     return (
       <div className={ styles.weatherWidget }>
         <div className={ styles.container }>
