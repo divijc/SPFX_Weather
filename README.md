@@ -1,6 +1,6 @@
-## weather
+## Weather Widget App for Sharpoint
 
-This is where you include your WebPart documentation.
+Customizable weather widget built in React with SPFx
 
 ### Building the code
 

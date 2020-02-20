@@ -5,6 +5,7 @@ import { escape } from '@microsoft/sp-lodash-subset';
 
 export default class WeatherWidget extends React.Component<IWeatherWidgetProps, {}> {
   public render(): React.ReactElement<IWeatherWidgetProps> {
+    
     return (
       <div className={ styles.weatherWidget }>
         <div className={ styles.container }>
